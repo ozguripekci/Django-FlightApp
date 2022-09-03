@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd party APPs
     'rest_framework',
-    'django-decouple',
+    'drf_yasg',
+    "debug_toolbar",
     # My apps
 
 ]
