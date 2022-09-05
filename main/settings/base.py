@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     # My apps
     'users',
+    'flight',
 
 ]
 
@@ -166,4 +167,14 @@ LOGGING = {
             # will not be handled by the django logger. 
         }, 
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
+
+REST_AUTH_SERIALIZERS = {
+    'TOKEN_SERIALIZER': 'users.serializers.CustomTokenSerializer',
 }
